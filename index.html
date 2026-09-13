@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Joyashley | Grade 9 Journey</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* ================================
+           GLOBAL SETTINGS
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f8f7f3;
+            color: #18201d;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* ================================
+           NAVIGATION
+        ================================= */
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 24px 6%;
+            color: white;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #d8e76f;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d8e76f;
+        }
+
+        .menu-btn {
+            display: none;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 1.7rem;
+            cursor: pointer;
+        }
+
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(8, 18, 15, 0.88) 0%,
+                    rgba(8, 18, 15, 0.65) 45%,
+                    rgba(8, 18, 15, 0.25) 100%
+                ),
+                url(images/Joyashley.jpg) center/cover no-repeat;
+
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+
+            padding-top: 80px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            margin-bottom: 18px;
+
+            color: #d8e76f;
+
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            max-width: 800px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(3.5rem, 8vw, 7.5rem);
+            line-height: 0.95;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #d8e76f;
+        }
+
+        .hero-subtitle {
+            max-width: 620px;
+
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: rgba(255,255,255,0.88);
+
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 14px 25px;
+
+            border-radius: 50px;
+
+            font-size: 0.9rem;
+            font-weight: 700;
+
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #d8e76f;
+            color: #18201d;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #e6f48a;
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.55);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #18201d;
+        }
+
+
+        /* ================================
+           HERO LABEL
+        ================================= */
+
+        .hero-label {
+            position: absolute;
+            right: 6%;
+            bottom: 40px;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            color: rgba(255,255,255,0.75);
+        }
+
+        .hero-label::before {
+            content: "";
+            width: 45px;
+            height: 1px;
+            background: #d8e76f;
+        }
+
+
+        /* ================================
+           INTRO SECTION
+        ================================= */
+
+        .intro {
+            padding: 110px 6%;
+            background: #f8f7f3;
+        }
+
+        .intro-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .section-number {
+            font-family: "Playfair Display", serif;
+            font-size: 4rem;
+            color: #c9c9c0;
+        }
+
+        .intro h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2rem, 4vw, 3.6rem);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .intro p {
+            color: #5d625f;
+            font-size: 1.05rem;
+            max-width: 700px;
+        }
+
+
+        /* ================================
+           RESPONSIVE DESIGN
+        ================================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 20px 5%;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+
+                top: 75px;
+                left: 5%;
+                right: 5%;
+
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 18px;
+
+                padding: 25px;
+
+                border-radius: 15px;
+
+                background: rgba(15, 25, 22, 0.96);
+
+                box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero {
+                min-height: 92vh;
+
+                background-position: 62% center;
+            }
+
+            .hero-content {
+                width: 90%;
+                padding-top: 90px;
+            }
+
+            .hero h1 {
+                font-size: clamp(3.2rem, 16vw, 5.5rem);
+            }
+
+            .hero-subtitle {
+                font-size: 0.98rem;
+            }
+
+            .hero-label {
+                display: none;
+            }
+
+            .intro {
+                padding: 80px 7%;
+            }
+
+            .intro-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .section-number {
+                font-size: 2.8rem;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- ================================
+         NAVIGATION
+    ================================= -->
+
+    <nav>
+
+        <a href="#" class="logo">
+            Joy<span>.</span>
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#story">My Story</a>
+            </li>
+
+            <li>
+                <a href="#blueprint">Blueprint</a>
+            </li>
+
+            <li>
+                <a href="https://photos.app.goo.gl/jSq7mr9FpahVuxkG9">Gallery</a>
+            </li>
+
+            <li>
+                <a href="https://mtotonijamii.github.io/mtotonijamii/teen-club.html">Teen Club</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================================
+         HERO / SPOTLIGHT
+    ================================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                Peter Kibukosya Comprehensive School
+            </span>
+
+            <h1>
+                Meet<br>
+                <span>Joyashley.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Grade 9 student. Young creative. Emerging storyteller.
+                A journey shaped by confidence, curiosity, talent and
+                the desire to leave a blueprint for others.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#story" class="btn btn-primary">
+                    Discover My Journey →
+                </a>
+
+                <a href="https://photos.app.goo.gl/jSq7mr9FpahVuxkG9" class="btn btn-outline">
+                    View My Gallery
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-label">
+            Growing • Creating • Inspiring
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         INTRO
+    ================================= -->
+
+    <section class="intro" id="story">
+
+        <div class="intro-container">
+
+            <div>
+                <div class="section-number">
+                    01
+                </div>
+            </div>
+
+            <div>
+
+                <h2>
+                    One chapter ends.
+                    A bigger journey begins.
+                </h2>
+
+                <p>
+                    My Grade 9 journey has been more than completing
+                    junior school. It has been a season of discovering
+                    my voice, building confidence, exploring my talents
+                    and understanding the possibilities that lie ahead.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+<!-- ==================================================
+     PART 2 — GRATITUDE
+================================================== -->
+
+<section class="gratitude-section" id="gratitude">
+
+    <div class="gratitude-container">
+
+        <div class="gratitude-tag">
+            02 GRATITUDE
+        </div>
+
+        <div class="gratitude-content">
+
+            <h2>
+                Thank you for giving
+                <span>us room to grow.</span>
+            </h2>
+
+            <p class="lead-text">
+                My journey through junior school has been shaped by
+                people, opportunities and experiences that helped me
+                discover more about myself.
+            </p>
+
+            <p>
+                I am grateful to Peter Kibukosya Comprehensive School
+                for creating opportunities to learn, explore and
+                participate beyond the classroom. I am equally grateful
+                for the Competency-Based Curriculum (CBC), which has
+                encouraged us to learn through practical projects,
+                creativity, collaboration and real-life experiences.
+            </p>
+
+            <p>
+                These experiences have shown me that education is not
+                only about what we know. It is also about what we can
+                create, how we connect with others and how confidently
+                we use what we have learned.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PART 2B — CONFIDENCE
+================================================== -->
+
+<section class="confidence-section" id="confidence">
+
+    <div class="confidence-wrapper">
+
+        <div class="confidence-image">
+
+            <img
+                src="images/gratitude.jpg"
+                alt="Joyashley"
+            >
+
+            <div class="image-caption">
+                Confidence is a journey.
+            </div>
+
+        </div>
+
+
+        <div class="confidence-text">
+
+            <div class="small-label">
+                DISCOVERY
+            </div>
+
+            <h2>
+                Confidence can
+                <span>change everything.</span>
+            </h2>
+
+            <p>
+                Along the way, I discovered something that changed how
+                I see school, talent and personal growth:
+                <strong>confidence matters.</strong>
+            </p>
+
+            <p>
+                When a student believes in their ability to speak,
+                create, participate and try something new, learning
+                becomes a different experience.
+            </p>
+
+            <p>
+                Confidence can influence our wellbeing, our willingness
+                to participate and even how we perform. It gives us the
+                courage to ask questions, share ideas, discover our
+                strengths and learn from mistakes.
+            </p>
+
+            <p>
+                I have learned that confidence is not about being the
+                loudest person in the room. Sometimes, it simply means
+                having the courage to believe that your voice,
+                your ideas and your talents matter.
+            </p>
+
+            <div class="confidence-quote">
+
+                <span>“</span>
+
+                <p>
+                    When young people believe in themselves,
+                    they begin to see possibilities in themselves.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PART 2C — TRANSITION STATEMENT
+================================================== -->
+
+<section class="transition-section">
+
+    <div class="transition-content">
+
+        <span>
+            AND THAT MADE ME ASK...
+        </span>
+
+        <h2>
+            What can I leave behind
+            for the next student?
+        </h2>
+
+        <a href="#blueprint" class="transition-btn">
+            Discover the Blueprint →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PART 2 CSS
+     Place this inside your existing <style> section
+================================================== -->
+
+<style>
+
+    /* =========================================
+       GRATITUDE SECTION
+    ========================================= */
+
+    .gratitude-section {
+        padding: 120px 6%;
+        background: #18201d;
+        color: white;
+    }
+
+    .gratitude-container {
+        max-width: 1150px;
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: 0.6fr 1.4fr;
+        gap: 70px;
+    }
+
+    .gratitude-tag {
+        color: #d8e76f;
+
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+    }
+
+    .gratitude-content {
+        max-width: 800px;
+    }
+
+    .gratitude-content h2 {
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(2.5rem, 5vw, 5rem);
+
+        line-height: 1.05;
+
+        margin-bottom: 35px;
+    }
+
+    .gratitude-content h2 span {
+        color: #d8e76f;
+    }
+
+    .gratitude-content p {
+        color: rgba(255,255,255,0.72);
+
+        font-size: 1rem;
+
+        margin-bottom: 20px;
+
+        max-width: 720px;
+    }
+
+    .gratitude-content .lead-text {
+        color: white;
+
+        font-size: 1.25rem;
+
+        line-height: 1.7;
+
+        margin-bottom: 30px;
+    }
+
+
+    /* =========================================
+       CONFIDENCE SECTION
+    ========================================= */
+
+    .confidence-section {
+        padding: 120px 6%;
+
+        background: #f8f7f3;
+    }
+
+    .confidence-wrapper {
+        max-width: 1150px;
+        margin: auto;
+
+        display: grid;
+
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 80px;
+
+        align-items: center;
+    }
+
+
+    /* IMAGE */
+
+    .confidence-image {
+        position: relative;
+    }
+
+    .confidence-image img {
+        width: 100%;
+
+        aspect-ratio: 4 / 5;
+
+        object-fit: cover;
+
+        border-radius: 4px;
+    }
+
+    .image-caption {
+        position: absolute;
+
+        left: 20px;
+        bottom: 20px;
+
+        padding: 10px 16px;
+
+        background: rgba(24,32,29,0.85);
+
+        color: white;
+
+        font-size: 0.75rem;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* TEXT */
+
+    .small-label {
+        color: #758044;
+
+        font-size: 0.75rem;
+
+        font-weight: 700;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 15px;
+    }
+
+    .confidence-text h2 {
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(2.5rem, 5vw, 4.7rem);
+
+        line-height: 1.05;
+
+        margin-bottom: 30px;
+    }
+
+    .confidence-text h2 span {
+        color: #758044;
+    }
+
+    .confidence-text p {
+        color: #606662;
+
+        font-size: 1rem;
+
+        margin-bottom: 20px;
+
+        max-width: 650px;
+    }
+
+    .confidence-text strong {
+        color: #18201d;
+    }
+
+
+    /* QUOTE */
+
+    .confidence-quote {
+        margin-top: 35px;
+
+        padding: 25px 30px;
+
+        border-left: 3px solid #d8e76f;
+
+        background: white;
+
+        display: flex;
+
+        gap: 15px;
+    }
+
+    .confidence-quote span {
+        font-family: "Playfair Display", serif;
+
+        font-size: 3rem;
+
+        line-height: 0.8;
+
+        color: #d8e76f;
+    }
+
+    .confidence-quote p {
+        margin: 0;
+
+        color: #303632;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 1.15rem;
+    }
+
+
+    /* =========================================
+       TRANSITION
+    ========================================= */
+
+    .transition-section {
+        padding: 120px 6%;
+
+        background:
+            linear-gradient(
+                135deg,
+                #d8e76f,
+                #edf5b2
+            );
+
+        text-align: center;
+    }
+
+    .transition-content {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .transition-content span {
+        display: block;
+
+        font-size: 0.72rem;
+
+        font-weight: 800;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 20px;
+
+        color: #4f5a28;
+    }
+
+    .transition-content h2 {
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(2.5rem, 6vw, 5.5rem);
+
+        line-height: 1.05;
+
+        color: #18201d;
+
+        margin-bottom: 35px;
+    }
+
+    .transition-btn {
+        display: inline-flex;
+
+        padding: 14px 25px;
+
+        border-radius: 50px;
+
+        background: #18201d;
+
+        color: white;
+
+        font-weight: 700;
+
+        transition: 0.3s ease;
+    }
+
+    .transition-btn:hover {
+        transform: translateY(-3px);
+
+        background: #303b35;
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 800px) {
+
+        .gratitude-section {
+            padding: 85px 7%;
+        }
+
+        .gratitude-container {
+            grid-template-columns: 1fr;
+
+            gap: 25px;
+        }
+
+        .gratitude-content h2 {
+            font-size: 2.8rem;
+        }
+
+        .gratitude-content .lead-text {
+            font-size: 1.1rem;
+        }
+
+
+        .confidence-section {
+            padding: 85px 7%;
+        }
+
+        .confidence-wrapper {
+            grid-template-columns: 1fr;
+
+            gap: 50px;
+        }
+
+        .confidence-image img {
+            aspect-ratio: 4 / 5;
+        }
+
+        .confidence-text h2 {
+            font-size: 3rem;
+        }
+
+        .confidence-quote {
+            padding: 20px;
+        }
+
+
+        .transition-section {
+            padding: 90px 7%;
+        }
+
+        .transition-content h2 {
+            font-size: 3rem;
+        }
+
+    }
+
+</style>
+<!-- ==================================================
+     PART 3 — THE BLUEPRINT
+================================================== -->
+
+<section class="blueprint-section" id="blueprint">
+
+    <div class="blueprint-header">
+
+        <div class="blueprint-number">
+            03
+        </div>
+
+        <div>
+
+            <span class="blueprint-label">
+                THE BLUEPRINT
+            </span>
+
+            <h2>
+                I don't just want to
+                <span>move on.</span>
+                I want to leave something behind.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="blueprint-intro">
+
+        <p>
+            As I prepare to transition to higher education, I have
+            been thinking about the students who will come after me.
+            I want my journey to become a starting point for someone
+            else's.
+        </p>
+
+        <p>
+            My vision is simple: create opportunities where students
+            can discover their interests, develop their talents,
+            express themselves and gain the confidence to dream bigger.
+        </p>
+
+    </div>
+
+
+    <!-- CLUBS -->
+
+    <div class="club-grid">
+
+
+        <!-- ENVIRONMENTAL CLUB -->
+
+        <article class="club-card environment-card">
+
+            <div class="club-top">
+
+                <span class="club-icon">
+                    🌱
+                </span>
+
+                <span class="club-number">
+                    01
+                </span>
+
+            </div>
+
+            <h3>
+                Environmental Club
+            </h3>
+
+            <p>
+                A space for students to understand, care for and take
+                action on the environment through practical activities,
+                creativity and teamwork.
+            </p>
+
+            <div class="club-ideas">
+
+                <span>🌿 Environmental awareness</span>
+                <span>♻️ Sustainability</span>
+                <span>🌍 Climate action</span>
+                <span>🌱 Practical projects</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- JOURNALISM CLUB -->
+
+        <article class="club-card journalism-card">
+
+            <div class="club-top">
+
+                <span class="club-icon">
+                    📰
+                </span>
+
+                <span class="club-number">
+                    02
+                </span>
+
+            </div>
+
+            <h3>
+                Journalism Club
+            </h3>
+
+            <p>
+                A creative space where students can discover the power
+                of storytelling through photography, writing, interviews,
+                school news and digital media.
+            </p>
+
+            <div class="club-ideas">
+
+                <span>📷 Photography</span>
+                <span>✍️ Writing</span>
+                <span>🎙️ Interviews</span>
+                <span>📱 Digital media</span>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- SUPPORT -->
+
+    <div class="blueprint-support">
+
+        <div class="support-copy">
+
+            <span class="small-label">
+                HELP BUILD THE VISION
+            </span>
+
+            <h3>
+                Great ideas need
+                <span>the right support.</span>
+            </h3>
+
+            <p>
+                These clubs are more than activities. They are
+                opportunities for students to discover themselves,
+                build confidence and develop skills that can shape
+                their future.
+            </p>
+
+            <p>
+                As I transition to higher education, I would love to
+                see this vision continue at school with the support,
+                mentorship and resources needed to make it possible.
+            </p>
+
+        </div>
+
+        <div class="support-action">
+
+            <div class="support-circle">
+                ✦
+            </div>
+
+            <p>
+                Support a young person's
+                idea. Help create an
+                opportunity for the next one.
+            </p>
+
+            <a href="#contact" class="blueprint-btn">
+                Support the Blueprint →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PART 3B — BEHIND THE LENS
+================================================== -->
+
+<section class="lens-section" id="lens">
+
+    <div class="lens-container">
+
+
+        <!-- IMAGE -->
+
+        <div class="lens-image">
+
+            <img
+                src="images/support.jpg"
+                alt="Joyashley exploring photography"
+            >
+            <div class="lens-badge">
+                Behind the lens
+            </div>
+
+        </div>
+
+
+        <!-- STORY -->
+
+        <div class="lens-content">
+
+            <span class="small-label">
+                ANOTHER DISCOVERY
+            </span>
+
+            <h2>
+                It started with
+                <span>a camera.</span>
+            </h2>
+
+            <p class="lens-lead">
+                Sometimes a talent begins with something as simple as
+                being given the chance to try.
+            </p>
+
+            <p>
+                I had the opportunity to take photographs using a
+                digital camera, and that experience opened my eyes to
+                the world of media and journalism.
+            </p>
+
+            <p>
+                I began to see photography differently — not just as
+                taking pictures, but as a way of capturing moments,
+                telling stories and helping people see the world
+                through another person's eyes.
+            </p>
+
+            <p>
+                It reminded me that young people need opportunities
+                to experiment. A simple opportunity can reveal a talent
+                that might otherwise remain undiscovered.
+            </p>
+
+            <a href="https://photos.app.goo.gl/jSq7mr9FpahVuxkG9" class="lens-link">
+                Explore my class of 2026 photographs
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PART 3C — YOUNG PEOPLE NEED OPPORTUNITIES
+================================================== -->
+
+<section class="opportunity-section">
+
+    <div class="opportunity-inner">
+
+        <span>
+            MY MESSAGE
+        </span>
+
+        <h2>
+            Give young people
+            <em>room to discover</em>
+            what they can become.
+        </h2>
+
+        <p>
+            Every student has something worth discovering.
+            Sometimes all they need is encouragement, a safe space,
+            a mentor and the opportunity to try.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PART 3 CSS
+     ADD THIS INSIDE YOUR EXISTING <style> SECTION
+================================================== -->
+
+<style>
+
+    /* =========================================
+       BLUEPRINT SECTION
+    ========================================= */
+
+    .blueprint-section {
+        padding: 120px 6%;
+
+        background: #eef0e6;
+    }
+
+    .blueprint-header {
+        max-width: 1150px;
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: 0.35fr 1.65fr;
+
+        gap: 50px;
+
+        align-items: start;
+    }
+
+    .blueprint-number {
+        font-family: "Playfair Display", serif;
+
+        font-size: 5rem;
+
+        color: #a8ae94;
+
+        line-height: 1;
+    }
+
+    .blueprint-label {
+        display: block;
+
+        color: #66713d;
+
+        font-size: 0.75rem;
+
+        font-weight: 800;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 18px;
+    }
+
+    .blueprint-header h2 {
+        max-width: 900px;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(2.8rem, 6vw, 6rem);
+
+        line-height: 1.02;
+
+        color: #18201d;
+    }
+
+    .blueprint-header h2 span {
+        color: #69763d;
+    }
+
+
+    /* =========================================
+       BLUEPRINT INTRO
+    ========================================= */
+
+    .blueprint-intro {
+        max-width: 850px;
+
+        margin: 65px auto 55px;
+
+        padding-left: 20%;
+
+    }
+
+    .blueprint-intro p {
+        color: #59605a;
+
+        font-size: 1.05rem;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================================
+       CLUB CARDS
+    ========================================= */
+
+    .club-grid {
+        max-width: 1150px;
+
+        margin: auto;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+    }
+
+    .club-card {
+        padding: 40px;
+
+        min-height: 410px;
+
+        border-radius: 8px;
+
+        position: relative;
+
+        transition: transform 0.3s ease,
+                    box-shadow 0.3s ease;
+    }
+
+    .club-card:hover {
+        transform: translateY(-7px);
+
+        box-shadow: 0 20px 45px rgba(0,0,0,0.10);
+    }
+
+    .environment-card {
+        background: #dce8bd;
+    }
+
+    .journalism-card {
+        background: #18201d;
+
+        color: white;
+    }
+
+    .club-top {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        margin-bottom: 65px;
+    }
+
+    .club-icon {
+        font-size: 2.4rem;
+    }
+
+    .club-number {
+        font-size: 0.75rem;
+
+        font-weight: 800;
+
+        letter-spacing: 2px;
+
+        opacity: 0.55;
+    }
+
+    .club-card h3 {
+        font-family: "Playfair Display", serif;
+
+        font-size: 2.5rem;
+
+        margin-bottom: 15px;
+    }
+
+    .club-card p {
+        max-width: 480px;
+
+        color: #59605a;
+
+        margin-bottom: 25px;
+    }
+
+    .journalism-card p {
+        color: rgba(255,255,255,0.68);
+    }
+
+    .club-ideas {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+
+    .club-ideas span {
+        padding: 7px 11px;
+
+        border-radius: 20px;
+
+        background: rgba(255,255,255,0.48);
+
+        font-size: 0.72rem;
+
+        font-weight: 600;
+    }
+
+    .journalism-card .club-ideas span {
+        background: rgba(255,255,255,0.1);
+    }
+
+
+    /* =========================================
+       SUPPORT
+    ========================================= */
+
+    .blueprint-support {
+        max-width: 1150px;
+
+        margin: 80px auto 0;
+
+        padding: 55px;
+
+        background: #ffffff;
+
+        display: grid;
+
+        grid-template-columns: 1.4fr 0.6fr;
+
+        gap: 60px;
+
+        align-items: center;
+
+        box-shadow: 0 15px 45px rgba(0,0,0,0.06);
+    }
+
+    .support-copy h3 {
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(2.3rem, 4vw, 4rem);
+
+        line-height: 1.05;
+
+        margin-bottom: 20px;
+    }
+
+    .support-copy h3 span {
+        color: #69763d;
+    }
+
+    .support-copy p {
+        color: #616762;
+
+        max-width: 700px;
+
+        margin-bottom: 15px;
+    }
+
+    .support-action {
+        text-align: center;
+
+        padding-left: 30px;
+
+        border-left: 1px solid #dfe2d8;
+    }
+
+    .support-circle {
+        width: 65px;
+        height: 65px;
+
+        margin: 0 auto 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #d8e76f;
+
+        font-size: 1.5rem;
+    }
+
+    .support-action p {
+        color: #59605a;
+
+        font-size: 0.9rem;
+
+        margin-bottom: 25px;
+    }
+
+    .blueprint-btn {
+        display: inline-flex;
+
+        padding: 13px 20px;
+
+        border-radius: 50px;
+
+        background: #18201d;
+
+        color: white;
+
+        font-size: 0.85rem;
+
+        font-weight: 700;
+
+        transition: 0.3s ease;
+    }
+
+    .blueprint-btn:hover {
+        transform: translateY(-3px);
+
+        background: #46503e;
+    }
+
+
+    /* =========================================
+       BEHIND THE LENS
+    ========================================= */
+
+    .lens-section {
+        padding: 120px 6%;
+
+        background: #ffffff;
+    }
+
+    .lens-container {
+        max-width: 1150px;
+
+        margin: auto;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 90px;
+
+        align-items: center;
+    }
+
+    .lens-image {
+        position: relative;
+    }
+
+    .lens-image img {
+        width: 100%;
+
+        aspect-ratio: 4 / 5;
+
+        object-fit: cover;
+
+        border-radius: 4px;
+    }
+
+    .lens-badge {
+        position: absolute;
+
+        right: -20px;
+
+        bottom: 35px;
+
+        padding: 13px 20px;
+
+        background: #d8e76f;
+
+        color: #18201d;
+
+        font-size: 0.75rem;
+
+        font-weight: 800;
+
+        letter-spacing: 1px;
+
+        text-transform: uppercase;
+    }
+
+    .lens-content h2 {
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(2.8rem, 5vw, 5rem);
+
+        line-height: 1;
+
+        margin-bottom: 25px;
+    }
+
+    .lens-content h2 span {
+        color: #69763d;
+    }
+
+    .lens-content p {
+        color: #606661;
+
+        margin-bottom: 18px;
+
+        max-width: 600px;
+    }
+
+    .lens-content .lens-lead {
+        color: #18201d;
+
+        font-size: 1.15rem;
+
+        margin-bottom: 25px;
+    }
+
+    .lens-link {
+        display: inline-flex;
+
+        gap: 12px;
+
+        margin-top: 15px;
+
+        color: #4f5d30;
+
+        font-weight: 800;
+
+        border-bottom: 1px solid #a9b181;
+
+        padding-bottom: 5px;
+    }
+
+    .lens-link span {
+        transition: transform 0.3s ease;
+    }
+
+    .lens-link:hover span {
+        transform: translateX(5px);
+    }
+
+
+    /* =========================================
+       OPPORTUNITY MESSAGE
+    ========================================= */
+
+    .opportunity-section {
+        padding: 130px 6%;
+
+        background: #18201d;
+
+        color: white;
+
+        text-align: center;
+    }
+
+    .opportunity-inner {
+        max-width: 950px;
+
+        margin: auto;
+    }
+
+    .opportunity-inner > span {
+        display: block;
+
+        color: #d8e76f;
+
+        font-size: 0.72rem;
+
+        font-weight: 800;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 25px;
+    }
+
+    .opportunity-inner h2 {
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(3rem, 6vw, 6rem);
+
+        line-height: 1.02;
+
+        margin-bottom: 30px;
+    }
+
+    .opportunity-inner h2 em {
+        color: #d8e76f;
+
+        font-style: normal;
+    }
+
+    .opportunity-inner p {
+        max-width: 650px;
+
+        margin: auto;
+
+        color: rgba(255,255,255,0.68);
+
+        font-size: 1.05rem;
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 800px) {
+
+        .blueprint-section {
+            padding: 85px 7%;
+        }
+
+        .blueprint-header {
+            grid-template-columns: 1fr;
+
+            gap: 10px;
+        }
+
+        .blueprint-number {
+            font-size: 3rem;
+        }
+
+        .blueprint-header h2 {
+            font-size: 3rem;
+        }
+
+        .blueprint-intro {
+            padding-left: 0;
+
+            margin-top: 45px;
+        }
+
+        .club-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .club-card {
+            padding: 30px;
+
+            min-height: auto;
+        }
+
+        .club-top {
+            margin-bottom: 45px;
+        }
+
+        .club-card h3 {
+            font-size: 2rem;
+        }
+
+        .blueprint-support {
+            grid-template-columns: 1fr;
+
+            padding: 35px 25px;
+
+            gap: 35px;
+        }
+
+        .support-action {
+            border-left: none;
+
+            border-top: 1px solid #dfe2d8;
+
+            padding-left: 0;
+
+            padding-top: 35px;
+        }
+
+
+        .lens-section {
+            padding: 85px 7%;
+        }
+
+        .lens-container {
+            grid-template-columns: 1fr;
+
+            gap: 55px;
+        }
+
+        .lens-badge {
+            right: 15px;
+
+            bottom: 20px;
+        }
+
+        .lens-content h2 {
+            font-size: 3rem;
+        }
+
+
+        .opportunity-section {
+            padding: 90px 7%;
+        }
+
+        .opportunity-inner h2 {
+            font-size: 3rem;
+        }
+
+    }
+
+</style>
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const navLinks = document.getElementById("navLinks");
+
+            navLinks.classList.toggle("active");
+
+        }
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                document.getElementById("navLinks")
+                    .classList.remove("active");
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
+```
